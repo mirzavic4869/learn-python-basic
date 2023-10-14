@@ -1,0 +1,8 @@
+{
+	"workbench.colorTheme": "Noctis Minimus",
+	"workbench.iconTheme": "vscode-icons",
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.autopep8"
+	},
+	"python.formatting.provider": "none"
+}
