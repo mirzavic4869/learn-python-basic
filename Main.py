@@ -44,3 +44,17 @@ print('type:', type(data_bool))
 data_c_double = c_double(10.5)
 print('data:', data_c_double)
 print('type:', type(data_c_double))
+
+
+def genapGanjil(num):
+    arr = []
+    for x in range(num):
+        if (x % 2 == 0):
+            arr.append(f'{x} adalah bilangan genap')
+        else:
+            arr.append(f'{x} adalah bilangan ganjil')
+
+    return arr
+
+
+print(genapGanjil(5))
