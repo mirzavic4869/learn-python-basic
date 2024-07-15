@@ -1,0 +1,1 @@
+nama = "Mirzam Avicena"
