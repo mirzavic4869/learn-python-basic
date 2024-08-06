@@ -1,60 +1,47 @@
-from ctypes import c_double
-print("Hello World")
-a = 10+2
-print(a)
-# ini comment
-"""ini comment
-tentu saja
+import os
+import CRUD as CRUD
 
-"""
+if __name__ == '__main__':
+    sistem_operasi = os.name
+    match sistem_operasi:
+        case 'posix': os.system('clear')
+        case 'nt': os.system('cls')
 
-# Variabel adalah tempat menyimpan data
+    title = 'SELAMAT DATANG DI PROGRAM'
+    print(title)
+    print("="*len(title))
 
-# menaruh data /assigment
-a = 10
-b = 2
-lebar = 200
+    # Mengecek Database
+    CRUD.init_console()
 
-# penamaan
-nilai_a = 2  # underscore boleh, kebab tidak boleh
-nilaiItem = 7  # boleh
-juta20 = 20000000  # angka tidak boleh di depan
+    while (True):
+        match sistem_operasi:
+            case 'posix': os.system('clear')
+            case 'nt': os.system('cls')
 
-print('Nilai a =', lebar)
+        title = 'SELAMAT DATANG DI PROGRAM'
+        print(title)
+        print("="*len(title))
 
-# Tipe Data
+        print(f'1. Read Data')
+        print(f'2. Create Data')
+        print(f'3. Update Data')
+        print(f'4. Delete Data')
 
-data_integer = 10
-print('data:', data_integer)
-print('type:', type(data_integer))
+        user_option = input('masukkan opsi: ')
 
-data_float = 10.5
-print('data:', data_float)
-print('type:', type(data_float))
+        print("="*len(title))
 
-data_string = "10"
-print('data:', data_string)
-print('type:', type(data_string))
+        match user_option:
+            case '1': print('Read Data')
+            case '2': print('Create Data')
+            case '3': print('Update Data')
+            case '4': print('Delete Data')
 
-data_bool = True
-print('data:', data_bool)
-print('type:', type(data_bool))
+        print("="*len(title))
 
+        is_done = input('Apakah sudah selesai(y/n): ')
+        if is_done == 'y' or is_done == 'Y':
+            break
 
-data_c_double = c_double(10.5)
-print('data:', data_c_double)
-print('type:', type(data_c_double))
-
-
-def genapGanjil(num):
-    arr = []
-    for x in range(num):
-        if (x % 2 == 0):
-            arr.append(f'{x} adalah bilangan genap')
-        else:
-            arr.append(f'{x} adalah bilangan ganjil')
-
-    return arr
-
-
-print(genapGanjil(5))
+        print('PROGRAM BERAKHIR, TERIMA KASIH')
