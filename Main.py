@@ -11,7 +11,7 @@ if __name__ == '__main__':
     print(title)
     print("="*len(title))
 
-    # Mengecek Database
+    # Mengecek Database ada atau tidak
     CRUD.init_console()
 
     while (True):
