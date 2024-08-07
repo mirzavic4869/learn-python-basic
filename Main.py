@@ -9,7 +9,6 @@ if __name__ == '__main__':
 
     title = 'SELAMAT DATANG DI PROGRAM'
     print(title)
-    print("="*len(title))
 
     # Mengecek Database ada atau tidak
     CRUD.init_console()
@@ -21,7 +20,6 @@ if __name__ == '__main__':
 
         title = 'SELAMAT DATANG DI PROGRAM'
         print(title)
-        print("="*len(title))
 
         print(f'1. Read Data')
         print(f'2. Create Data')
@@ -30,15 +28,11 @@ if __name__ == '__main__':
 
         user_option = input('masukkan opsi: ')
 
-        print("="*len(title))
-
         match user_option:
-            case '1': print('Read Data')
+            case '1': CRUD.read_console()
             case '2': print('Create Data')
             case '3': print('Update Data')
             case '4': print('Delete Data')
-
-        print("="*len(title))
 
         is_done = input('Apakah sudah selesai(y/n): ')
         if is_done == 'y' or is_done == 'Y':
