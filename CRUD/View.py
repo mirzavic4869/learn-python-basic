@@ -1,6 +1,26 @@
 from . import Operasi
 
 
+def create_console():
+    print('\n'+'='*100+'\n')
+    penulis = input('Penulis\t: ')
+    judul = input('Judul\t: ')
+
+    while (True):
+        try:
+            tahun = int(input('Tahun\t: '))
+            if (len(str(tahun))) == 4:
+                break
+            else:
+                print('masukkan tahun dengan format (yyyy). masukkan lagi!')
+        except:
+            print('masukkan tahun dengan angka. masukkan lagi!')
+
+    Operasi.create(tahun, judul, penulis)
+    print('\nIni adalah data terbaru')
+    read_console()
+
+
 def read_console():
     data_file = Operasi.read()
 
