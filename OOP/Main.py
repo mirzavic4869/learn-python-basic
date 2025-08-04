@@ -1,18 +1,15 @@
 class Hero:  # template
-    pass
+    def __init__(self, inputName, inputHealth, inputPower, inputArmor):
+        self.name = inputName
+        self.health = inputHealth
+        self.power = inputPower
+        self.armor = inputArmor
 
 
-hero1 = Hero()  # object / instance
-hero2 = Hero()
-hero3 = Hero()
+hero1 = Hero("Sniper", 100, 10, 20)
+hero2 = Hero("Mirana", 200, 20, 50)
+hero3 = Hero("Sven", 400, 5, 30)
 
-hero1.name = 'Sniper'
-hero1.health = 100
-
-hero2.name = 'Sven'
-hero2.health = 300
-
-hero3.name = 'Mirana'
-hero3.health = 500
-
-print(hero1.__dict__)
+print(hero1.name)
+print(hero2.__dict__)
+print(hero3.armor)
